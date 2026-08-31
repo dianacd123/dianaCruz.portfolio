@@ -1,11 +1,20 @@
+:root {
+  --background-color: #f7f4ef;
+  --text-color: #2b2b2b;
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
 }
