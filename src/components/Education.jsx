@@ -7,6 +7,10 @@ function Education() {
     returnObjects: true
   })
 
+  const courses = t('courses.items', {
+    returnObjects: true
+  })
+
   return (
     <section>
       <h2>{t('sections.education')}</h2>
@@ -19,6 +23,21 @@ function Education() {
           <p>{item.status}</p>
         </article>
       ))}
+
+      <div>
+        <h3>{t('courses.title')}</h3>
+
+        <ul>
+          {courses.map((course, index) => (
+            <li key={index}>{course}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h3>{t('languages.title')}</h3>
+        <p>{t('languages.english')}</p>
+      </div>
     </section>
   )
 }

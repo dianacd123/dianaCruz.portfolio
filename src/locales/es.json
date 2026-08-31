@@ -120,6 +120,19 @@
         "databases": "Bases de datos",
         "tools": "Herramientas"
     },
+    "courses": {
+        "title": "Formación complementaria",
+        "items": [
+            "Introducción a Java | Accenture Learning to Earning | Julio 2026",
+            "Curso Profesional de Docker | Código Facilito | Mayo 2025",
+            "Fundamentos profesionales en IA generativa | Microsoft | Enero 2025",
+            "JavaScript Moderno | Udemy | Febrero 2024"
+        ]
+    },
+    "languages": {
+        "title": "Idiomas",
+        "english": "Inglés | B1 (Intermedio)"
+    },
     "contact": {
         "intro": "¿Tienes una oportunidad, proyecto o quieres ponerte en contacto conmigo?",
         "name": "Nombre",

@@ -20,6 +20,31 @@ function Hero() {
           {t('hero.downloadCV')}
         </a>
       </div>
+      <div>
+        <a
+          href="mailto:dianacruzd01@outlook.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Email
+        </a>
+
+        <a
+          href="www.linkedin.com/in/diana-cd"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/dianacd123"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+      </div>
     </section>
   )
 }
