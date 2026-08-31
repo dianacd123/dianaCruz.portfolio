@@ -4,7 +4,7 @@ function Hero() {
   const { t } = useTranslation()
 
   return (
-    <section>
+    <section href="#home">
       <p>{t('hero.portfolio')}</p>
       <h1>{t('hero.name')}</h1>
       <h2>{t('hero.role')}</h2>

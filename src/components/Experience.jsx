@@ -8,7 +8,7 @@ function Experience() {
   })
 
   return (
-    <section>
+    <section id="experience">
       <h2>{t('sections.experience')}</h2>
 
       {experience.map((job) => (

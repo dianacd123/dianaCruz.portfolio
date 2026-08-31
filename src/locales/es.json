@@ -1,4 +1,10 @@
 {
+    "nav": {
+        "about": "Sobre mí",
+        "projects": "Proyectos",
+        "experience": "Experiencia",
+        "contact": "Contacto"
+    },
     "hero": {
         "portfolio": "Portfolio 2026",
         "name": "Diana Cruz Delgado",
@@ -113,6 +119,13 @@
         "backend": "Backend",
         "databases": "Bases de datos",
         "tools": "Herramientas"
+    },
+    "contact": {
+        "intro": "¿Tienes una oportunidad, proyecto o quieres ponerte en contacto conmigo?",
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "message": "Mensaje",
+        "send": "Enviar mensaje"
     },
     "footer": {
         "text": "Diana Cruz · Portfolio 2026"

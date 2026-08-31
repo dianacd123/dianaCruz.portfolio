@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 
 function Navbar() {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language)
@@ -10,15 +10,35 @@ function Navbar() {
 
   return (
     <nav>
-      <p>Navbar</p>
+      <a href="#home">Diana CD</a>
 
-      <button onClick={() => changeLanguage('es')}>
-        ES
-      </button>
+      <ul>
+        <li>
+          <a href="#about">{t('nav.about')}</a>
+        </li>
 
-      <button onClick={() => changeLanguage('en')}>
-        EN
-      </button>
+        <li>
+          <a href="#projects">{t('nav.projects')}</a>
+        </li>
+
+        <li>
+          <a href="#experience">{t('nav.experience')}</a>
+        </li>
+
+        <li>
+          <a href="#contact">{t('nav.contact')}</a>
+        </li>
+      </ul>
+
+      <div>
+        <button onClick={() => changeLanguage('es')}>
+          ES
+        </button>
+
+        <button onClick={() => changeLanguage('en')}>
+          EN
+        </button>
+      </div>
     </nav>
   )
 }
