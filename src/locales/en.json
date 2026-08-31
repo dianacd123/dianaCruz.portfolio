@@ -1,0 +1,120 @@
+{
+    "hero": {
+        "portfolio": "Portfolio 2026",
+        "name": "Diana Cruz Delgado",
+        "role": "Junior Java Full Stack Developer",
+        "description": "I build web applications by connecting intuitive interfaces, REST APIs, and backend services to create functional, scalable, and user-centered solutions.",
+        "availability": "Available for new opportunities",
+        "contact": "Contact me",
+        "downloadCV": "Download CV"
+    },
+    "about": {
+        "title": "About me",
+        "paragraph1": "I am a Junior Java Full Stack Developer with experience building web applications and working with frontend and backend technologies. I enjoy analyzing needs, anticipating potential issues, and turning them into functional, scalable solutions focused on both the user and the needs of the business.",
+        "paragraph2": "I enjoy learning new technologies, paying attention to detail, and building interfaces that are clear, accessible, and pleasant to use."
+    },
+    "sections": {
+        "skills": "Skills",
+        "projects": "Projects",
+        "experience": "Experience",
+        "education": "Education",
+        "contact": "Contact"
+    },
+    "projects": {
+        "items": [
+            {
+                "id": 1,
+                "title": "Pa' la asada",
+                "type": "E-commerce",
+                "role": "Java Full Stack Developer",
+                "period": "July 2026 - October 2026",
+                "description": "Meat e-commerce platform focused on providing a responsive shopping experience and efficient product and data management."
+            },
+            {
+                "id": 2,
+                "title": "Voltium",
+                "type": "E-commerce",
+                "role": "Front-End Developer",
+                "period": "August 2026",
+                "description": "Multi-brand sports e-commerce platform developed during a hackathon, focused on modern, accessible, and responsive navigation."
+            },
+            {
+                "id": 3,
+                "title": "MarketConnect - Logistics Services",
+                "type": "Corporate website",
+                "role": "Front-End Web Developer",
+                "period": "2023 - 2025",
+                "description": "Corporate website focused on logistics services, developed to showcase services, simplify navigation, and generate contact with potential clients."
+            },
+            {
+                "id": 4,
+                "title": "MarketConnect - Machinery",
+                "type": "Catalog / commercial website",
+                "role": "Front-End Web Developer",
+                "period": "2023 - 2025",
+                "description": "MarketConnect extension focused on machinery rental and sales, featuring an equipment catalog, visual product information, and quotation calls to action."
+            }
+        ]
+    },
+    "experience": {
+        "items": [
+            {
+                "id": 1,
+                "role": "Full Stack Developer",
+                "company": "SynaptiX Cognitive S. de R.L. de C.V.",
+                "period": "April 2025 - February 2026",
+                "description": [
+                    "Developed web interfaces with React, TypeScript, Vite, and Tailwind CSS for administrative and user-facing applications.",
+                    "Built inventory and user CRUD modules and integrated Firebase for multimedia content.",
+                    "Implemented user authentication and registration and integrated .NET backend services through REST APIs, Swagger, and Axios.",
+                    "Configured internationalization with i18n in English and Spanish."
+                ]
+            },
+            {
+                "id": 2,
+                "role": "Front-End Web Developer",
+                "company": "Servicios Digitales Disinet S.A.S.",
+                "period": "September 2023 - April 2025",
+                "description": [
+                    "Developed responsive landing pages with React and Tailwind CSS.",
+                    "Configured hosting and domains and integrated APIs for publishing web solutions.",
+                    "Managed digital stores on Shopify and Mercado Libre."
+                ]
+            }
+        ]
+    },
+    "education": {
+        "items": [
+            {
+                "id": 1,
+                "degree": "Bachelor's Degree in Software Development and Management",
+                "institution": "Universidad Tecnológica de Tecámac",
+                "period": "September 2023 - April 2025",
+                "status": "Graduated"
+            },
+            {
+                "id": 2,
+                "degree": "Higher University Technician in Multiplatform Software Development",
+                "institution": "Universidad Tecnológica de Tecámac",
+                "period": "August 2021 - August 2023",
+                "status": "Graduated"
+            },
+            {
+                "id": 3,
+                "degree": "Java Full Stack Developer",
+                "institution": "Generation México",
+                "period": "July - October 2026",
+                "status": "Bootcamp"
+            }
+        ]
+    },
+    "skills": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "databases": "Databases",
+        "tools": "Tools"
+    },
+    "footer": {
+        "text": "Diana Cruz · Portfolio 2026"
+    }
+}

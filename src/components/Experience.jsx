@@ -1,9 +1,15 @@
-import { experience } from '../data/experience'
+import { useTranslation } from 'react-i18next'
 
 function Experience() {
+  const { t } = useTranslation()
+
+  const experience = t('experience.items', {
+    returnObjects: true
+  })
+
   return (
     <section>
-      <h2>Experiencia</h2>
+      <h2>{t('sections.experience')}</h2>
 
       {experience.map((job) => (
         <article key={job.id}>

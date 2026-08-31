@@ -1,7 +1,11 @@
+import { useTranslation } from 'react-i18next'
+
 function Footer() {
+  const { t } = useTranslation()
+
   return (
     <footer>
-      <p>Diana Cruz · Portfolio 2026</p>
+      <p>{t('footer.text')}</p>
     </footer>
   )
 }

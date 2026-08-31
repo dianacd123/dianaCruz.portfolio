@@ -1,9 +1,15 @@
-import { education } from '../data/education'
+import { useTranslation } from 'react-i18next'
 
 function Education() {
+  const { t } = useTranslation()
+
+  const education = t('education.items', {
+    returnObjects: true
+  })
+
   return (
     <section>
-      <h2>Educación</h2>
+      <h2>{t('sections.education')}</h2>
 
       {education.map((item) => (
         <article key={item.id}>

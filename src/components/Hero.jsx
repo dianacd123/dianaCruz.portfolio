@@ -1,24 +1,23 @@
+import { useTranslation } from 'react-i18next'
+
 function Hero() {
+  const { t } = useTranslation()
+
   return (
     <section>
-      <p>Portfolio 2026</p>
-
-      <h1>Diana Cruz Delgado</h1>
-
-      <h2>Desarrolladora Java Full Stack Jr.</h2>
-
-      <p>
-        Desarrollo aplicaciones web conectando interfaces intuitivas,
-        APIs REST y servicios backend para crear soluciones funcionales,
-        escalables y centradas en el usuario.
-      </p>
-
-      <p>Disponible para nuevas oportunidades</p>
+      <p>{t('hero.portfolio')}</p>
+      <h1>{t('hero.name')}</h1>
+      <h2>{t('hero.role')}</h2>
+      <p>{t('hero.description')}</p>
+      <p>{t('hero.availability')}</p>
 
       <div>
-        <a href="#contact">Contáctame</a>
+        <a href="#contact">
+          {t('hero.contact')}
+        </a>
+
         <a href="/cv/Diana-Cruz-CV-ES.pdf" download>
-          Descargar CV
+          {t('hero.downloadCV')}
         </a>
       </div>
     </section>
