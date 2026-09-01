@@ -138,7 +138,10 @@
         "name": "Name",
         "email": "Email",
         "message": "Message",
-        "send": "Send message"
+        "send": "Send message",
+        "success": "Message sent successfully.",
+        "error": "The message could not be sent. Please try again.",
+        "sending": "Sending..."
     },
     "footer": {
         "text": "Diana Cruz · Portfolio 2026"
