@@ -1,11 +1,30 @@
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 function Navbar() {
   const { t, i18n } = useTranslation()
-
+  const [theme, setTheme] = useState(
+    localStorage.getItem('theme') || 'light'
+  )
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+  }, [theme])
   const changeLanguage = (language) => {
     i18n.changeLanguage(language)
     localStorage.setItem('language', language)
+  }
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+
+    document.body.classList.add('theme-transition')
+
+    setTheme(newTheme)
+    localStorage.setItem('theme', newTheme)
+    document.documentElement.setAttribute('data-theme', newTheme)
+
+    setTimeout(() => {
+      document.body.classList.remove('theme-transition')
+    }, 1000)
   }
 
   return (
@@ -37,6 +56,13 @@ function Navbar() {
 
         <button onClick={() => changeLanguage('en')}>
           EN
+        </button>
+        <button
+          type="button"
+          onClick={toggleTheme}
+          aria-label={theme === 'light' ? 'Activar modo oscuro' : 'Activar modo claro'}
+        >
+          {theme === 'light' ? '☾' : '☀'}
         </button>
       </div>
     </nav>
