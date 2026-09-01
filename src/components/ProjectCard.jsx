@@ -9,10 +9,13 @@ function ProjectCard({ project, index }) {
 
   return (
     <article>
+      <img
+        src={project.image}
+        alt={projectText.title}
+      />
+
       <h3>{projectText.title}</h3>
-      <p>{projectText.type}</p>
       <p>{projectText.role}</p>
-      <p>{projectText.period}</p>
       <p>{projectText.description}</p>
 
       <ul>
@@ -20,6 +23,30 @@ function ProjectCard({ project, index }) {
           <li key={technology}>{technology}</li>
         ))}
       </ul>
+
+      <div>
+        {project.repository && (
+          <a
+            href={project.repository}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`GitHub - ${projectText.title}`}
+          >
+            GitHub
+          </a>
+        )}
+
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Demo - ${projectText.title}`}
+          >
+            Demo
+          </a>
+        )}
+      </div>
     </article>
   )
 }
