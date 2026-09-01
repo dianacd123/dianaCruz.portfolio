@@ -1,0 +1,35 @@
+.language-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 8rem;
+  height: 3.6rem;
+  padding: 0 0.8rem;
+  border: 0.1rem solid var(--text-color);
+  border-radius: 999rem;
+  background-color: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.language-option {
+  position: relative;
+  z-index: 2;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.language-thumb {
+  position: absolute;
+  left: 0.3rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.language-thumb--right {
+  transform: translateX(4.3rem);
+}

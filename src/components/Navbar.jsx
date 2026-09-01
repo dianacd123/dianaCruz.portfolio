@@ -50,13 +50,24 @@ function Navbar() {
       </ul>
 
       <div>
-        <button onClick={() => changeLanguage('es')}>
-          ES
+        <button
+          type="button"
+          className="language-toggle"
+          onClick={() =>
+            changeLanguage(i18n.language === 'es' ? 'en' : 'es')
+          }
+          aria-label="Cambiar idioma"
+        >
+          <span className="language-option">ES</span>
+
+          <span
+            className={`language-thumb ${i18n.language === 'en' ? 'language-thumb--right' : ''
+              }`}
+          />
+
+          <span className="language-option">EN</span>
         </button>
 
-        <button onClick={() => changeLanguage('en')}>
-          EN
-        </button>
         <button
           type="button"
           onClick={toggleTheme}
