@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Myrtille Pixel';
-  src: url('../assets/fonts/myrtille-pixel.otf') format('truetype');
+  src: url('../assets/fonts/myrtille-pixel.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --background-color: #fff9db;
+  --background-color: #faf8f2;
   --text-color: #2b2b2b;
 
   --primary-color: #ffc0cb;
@@ -41,9 +41,48 @@ html {
 
 body {
   margin: 0;
+
   background-color: var(--background-color);
+
+  background-image:
+    radial-gradient(circle 34rem at 18vw 28vh,
+      rgb(255 192 203 / 0.95) 0%,
+      rgb(255 192 203 / 0.70) 30%,
+      rgb(255 192 203 / 0.25) 55%,
+      transparent 82%),
+    radial-gradient(circle 32rem at 73vw 20vh,
+      rgb(178 242 187 / 0.95) 0%,
+      rgb(178 242 187 / 0.70) 30%,
+      rgb(178 242 187 / 0.25) 55%,
+      transparent 82%),
+    radial-gradient(circle 36rem at 50vw 80vh,
+      rgb(186 225 255 / 0.95) 0%,
+      rgb(186 225 255 / 0.70) 30%,
+      rgb(186 225 255 / 0.25) 55%,
+      transparent 82%);
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+
   color: var(--text-color);
   font-family: var(--font-main);
+}
+
+[data-theme="dark"] body {
+  background-image:
+    radial-gradient(circle 34rem at 18vw 28vh,
+      rgb(255 192 203 / 0.30) 0%,
+      rgb(255 192 203 / 0.12) 40%,
+      transparent 82%),
+    radial-gradient(circle 32rem at 73vw 20vh,
+      rgb(178 242 187 / 0.27) 0%,
+      rgb(178 242 187 / 0.10) 40%,
+      transparent 82%),
+    radial-gradient(circle 36rem at 50vw 80vh,
+      rgb(186 225 255 / 0.27) 0%,
+      rgb(186 225 255 / 0.10) 40%,
+      transparent 82%);
 }
 
 h1,
