@@ -2,6 +2,13 @@ import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { useTranslation } from 'react-i18next'
 
+import {
+  Github,
+  Linkedin,
+  Mail
+} from 'pixelarticons/react'
+
+
 import { Send } from 'pixelarticons/react'
 
 function Contact() {
@@ -48,16 +55,13 @@ function Contact() {
         <p>{t('contact.intro')}</p>
 
         <div className="contact-links">
-          <a href="mailto:dianacruzd01@outlook.com">
-            Email
-          </a>
 
           <a
             href="https://www.linkedin.com/in/diana-cd"
             target="_blank"
             rel="noreferrer"
           >
-            LinkedIn
+           <Linkedin></Linkedin>
           </a>
 
           <a
@@ -65,7 +69,7 @@ function Contact() {
             target="_blank"
             rel="noreferrer"
           >
-            GitHub
+            <Github></Github>
           </a>
         </div>
       </div>

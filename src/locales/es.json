@@ -6,7 +6,7 @@
         "contact": "Contacto"
     },
     "hero": {
-        "portfolio": "Portfolio 2026",
+        "portfolio": "Portafolio 2026",
         "name": "Diana Cruz Delgado",
         "role": "Desarrolladora Java Full Stack Jr.",
         "description": "Desarrollo aplicaciones web conectando interfaces intuitivas, APIs REST y servicios backend para crear soluciones funcionales, escalables y centradas en el usuario.",
@@ -144,6 +144,6 @@
         "sending": "Enviando..."
     },
     "footer": {
-        "text": "Diana Cruz · Portfolio 2026"
+        "text": "Diana Cruz · Portafolio 2026"
     }
 }
