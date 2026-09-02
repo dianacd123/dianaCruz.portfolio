@@ -137,3 +137,60 @@ img {
   width: min(90%, 120rem);
   margin: 0 auto;
 }
+
+
+.doodle-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  #root {
+  position: relative;
+  z-index: 1;
+  }
+}
+
+.doodle {
+  position: absolute;
+  max-width: none;
+
+  user-select: none;
+  pointer-events: none;
+
+  filter:
+    grayscale(1)
+    brightness(0.45);
+
+  opacity: 0.52;
+}
+
+.doodle-raiz {
+  width: 25rem;
+  bottom: -5%;
+  left: -1%;
+
+  transform: rotate(20deg);
+}
+
+
+
+.doodle-naruto {
+  width: 14rem;
+  top: 65%;
+  right: 4%;
+  transform: rotate(6deg);
+}
+
+.doodle-star {
+  width: 10rem;
+  top: 35%;
+  right: 8%;
+  transform: rotate(-12deg);
+}
+
+.doodle-strella {
+  width: 7rem;
+  top: 20%;
+  left: 45%;
+  transform: rotate(10deg);
+}

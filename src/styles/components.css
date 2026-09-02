@@ -276,7 +276,7 @@
   overflow: hidden;
   border: 0.1rem solid var(--text-color);
   background-color: var(--background-color);
-
+  z-index: 3;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -365,6 +365,7 @@
   background-color: var(--background-color);
   box-shadow:
     0.6rem 0.6rem 0 var(--secondary-color);
+  z-index: 3;
 }
 
 .about-content p {
@@ -382,6 +383,7 @@
   grid-template-columns: repeat(auto-fit,
       minmax(24rem, 1fr));
   gap: 2.4rem;
+
 }
 
 .skill-group {
@@ -390,6 +392,7 @@
   background-color: var(--background-color);
   box-shadow:
     0.5rem 0.5rem 0 var(--primary-color);
+  z-index: 3;
 }
 
 .skill-group h3 {
@@ -443,6 +446,7 @@
   border: 0.2rem solid var(--text-color);
   background-color: var(--background-color);
   box-shadow: 0.5rem 0.5rem 0 var(--tertiary-color);
+
 }
 
 .experience-company,
@@ -467,14 +471,17 @@
       minmax(26rem, 1fr));
   gap: 2.4rem;
   margin-top: 4rem;
+
 }
 
 .education-item {
   padding: 2.4rem;
   border: 0.2rem solid var(--text-color);
   background-color: var(--background-color);
+  z-index: 3;
   box-shadow:
     0.5rem 0.5rem 0 var(--secondary-color);
+
 }
 
 .education-item h3 {
@@ -493,6 +500,7 @@
   grid-template-columns: 2fr 1fr;
   gap: 2.4rem;
   margin-top: 3rem;
+
 }
 
 .courses,
@@ -500,6 +508,7 @@
   padding: 2.4rem;
   border: 0.2rem solid var(--text-color);
   background-color: var(--background-color);
+  z-index: 3;
 }
 
 .courses h3,
@@ -523,6 +532,7 @@
   grid-template-columns: 0.8fr 1.2fr;
   gap: 6rem;
   align-items: center;
+
 }
 
 .contact-info {
@@ -533,7 +543,7 @@
   margin-bottom: 2rem;
 }
 
-.contact-info > p {
+.contact-info>p {
   margin-bottom: 3rem;
   line-height: 1.7;
 }
@@ -564,6 +574,7 @@
   border: 0.2rem solid var(--text-color);
   background-color: var(--background-color);
   box-shadow: 0.6rem 0.6rem 0 var(--primary-color);
+  z-index: 3;
 }
 
 .contact-form .pixel-button-wrapper {
