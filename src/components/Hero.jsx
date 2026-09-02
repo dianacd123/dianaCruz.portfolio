@@ -79,7 +79,9 @@ function Hero() {
       </div>
 
       <div className="hero-image">
-
+        <img
+          alt="Diana Cruz Delgado"
+        />
       </div>
     </section>
   )

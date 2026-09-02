@@ -3,16 +3,27 @@ import { useTranslation } from 'react-i18next'
 
 function Navbar() {
   const { t, i18n } = useTranslation()
+  const [menuOpen, setMenuOpen] = useState(false)
   const [theme, setTheme] = useState(
     localStorage.getItem('theme') || 'light'
   )
+
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
   }, [theme])
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+  const closeMenu = () => {
+    setMenuOpen(false)
+  }
+
   const changeLanguage = (language) => {
     i18n.changeLanguage(language)
     localStorage.setItem('language', language)
   }
+
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light'
 
@@ -28,59 +39,108 @@ function Navbar() {
   }
 
   return (
-    <nav className="navbar">
-      <div className="navbar-container container">
-        <a href="#home" className="navbar-brand">
-          DianaCD
-        </a>
+    <>
+      <nav className="navbar">
+        <div className="navbar-container container">
 
-        <ul className="navbar-links">
-          <li>
-            <a href="#about">{t('nav.about')}</a>
-          </li>
+          <a href="#home" className="navbar-brand">
+            DianaCD
+          </a>
 
-          <li>
-            <a href="#projects">{t('nav.projects')}</a>
-          </li>
+          <ul
+            id="navbar-links"
+            className={`navbar-links ${menuOpen ? 'navbar-links--open' : ''
+              }`}
+          >
+            <li>
+              <a href="#about" onClick={closeMenu}>
+                {t('nav.about')}
+              </a>
+            </li>
 
-          <li>
-            <a href="#experience">{t('nav.experience')}</a>
-          </li>
+            <li>
+              <a href="#projects" onClick={closeMenu}>
+                {t('nav.projects')}
+              </a>
+            </li>
 
-          <li>
-            <a href="#contact">{t('nav.contact')}</a>
-          </li>
-        </ul>
+            <li>
+              <a href="#experience" onClick={closeMenu}>
+                {t('nav.experience')}
+              </a>
+            </li>
 
-        <div className="navbar-actions">
+            <li>
+              <a href="#contact" onClick={closeMenu}>
+                {t('nav.contact')}
+              </a>
+            </li>
+          </ul>
+
+          <div className="navbar-actions">
+            <button
+              type="button"
+              className="language-toggle"
+              onClick={() =>
+                changeLanguage(
+                  i18n.language === 'es' ? 'en' : 'es'
+                )
+              }
+              aria-label="Cambiar idioma"
+            >
+              <span className="language-option">ES</span>
+
+              <span
+                className={`language-thumb ${i18n.language === 'en'
+                    ? 'language-thumb--right'
+                    : ''
+                  }`}
+              />
+
+              <span className="language-option">EN</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label={
+                theme === 'light'
+                  ? 'Activar modo oscuro'
+                  : 'Activar modo claro'
+              }
+            >
+              {theme === 'light' ? '☾' : '☀'}
+            </button>
+          </div>
+
           <button
             type="button"
-            className="language-toggle"
-            onClick={() =>
-              changeLanguage(i18n.language === 'es' ? 'en' : 'es')
+            className="navbar-toggle"
+            onClick={toggleMenu}
+            aria-expanded={menuOpen}
+            aria-controls="navbar-links"
+            aria-label={
+              menuOpen
+                ? 'Cerrar menú de navegación'
+                : 'Abrir menú de navegación'
             }
-            aria-label="Cambiar idioma"
           >
-            <span className="language-option">ES</span>
-
-            <span
-              className={`language-thumb ${i18n.language === 'en' ? 'language-thumb--right' : ''
-                }`}
-            />
-
-            <span className="language-option">EN</span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
 
-          <button
-            type="button"
-            onClick={toggleTheme}
-            aria-label={theme === 'light' ? 'Activar modo oscuro' : 'Activar modo claro'}
-          >
-            {theme === 'light' ? '☾' : '☀'}
-          </button>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {menuOpen && (
+        <div
+          className="navbar-overlay"
+          onClick={closeMenu}
+          aria-hidden="true"
+        />
+      )}
+    </>
   )
 }
 
