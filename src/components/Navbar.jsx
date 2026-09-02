@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import {
+  Sun,
+  Moon,
+  Menu
+} from 'pixelarticons/react'
+
 
 function Navbar() {
   const { t, i18n } = useTranslation()
@@ -109,7 +115,7 @@ function Navbar() {
                   : 'Activar modo claro'
               }
             >
-              {theme === 'light' ? '☾' : '☀'}
+              {theme === 'light' ? <Moon /> : <Sun />}
             </button>
           </div>
 
@@ -125,9 +131,7 @@ function Navbar() {
                 : 'Abrir menú de navegación'
             }
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <Menu />
           </button>
 
         </div>

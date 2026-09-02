@@ -1,4 +1,12 @@
 import { useTranslation } from 'react-i18next'
+import {
+  Briefcase,
+  Mail,
+  Download,
+  Linkedin,
+  Github
+} from 'pixelarticons/react'
+
 import dianaPhoto from '../assets/images/diana.png'
 
 function Hero() {
@@ -17,7 +25,10 @@ function Hero() {
 
         <p>{t('hero.description')}</p>
 
-        <p>{t('hero.availability')}</p>
+       <p className="hero-availability">
+  <Briefcase />
+  {t('hero.availability')}
+</p>
 
         <div className="hero-actions">
 
@@ -26,6 +37,7 @@ function Hero() {
               href="#contact"
               className="pixel-button"
             >
+              <Mail />
               {t('hero.contact')}
             </a>
           </span>
@@ -33,6 +45,7 @@ function Hero() {
           <details className="cv-download">
             <summary className="pixel-button-wrapper">
               <span className="pixel-button">
+                <Download />
                 {t('hero.downloadCV')}
               </span>
             </summary>
@@ -57,16 +70,14 @@ function Hero() {
         </div>
 
         <div className="hero-socials">
-          <a href="mailto:dianacruzd01@outlook.com">
-            Email
-          </a>
 
           <a
             href="https://www.linkedin.com/in/diana-cd"
             target="_blank"
             rel="noreferrer"
           >
-            LinkedIn
+            <Linkedin />
+            
           </a>
 
           <a
@@ -74,7 +85,8 @@ function Hero() {
             target="_blank"
             rel="noreferrer"
           >
-            GitHub
+            <Github />
+            
           </a>
         </div>
       </div>

@@ -23,6 +23,8 @@
   --tertiary-color: #bae1ff;
   --neutral-color: #fff9db;
 
+  --control-text-color: #2b2b2b;
+
   --font-display: 'Myrtille Pixel', cursive;
   --font-pixel: 'Pixerif', monospace;
   --font-main: 'Plus Jakarta Sans', sans-serif;
@@ -36,6 +38,8 @@
   --secondary-color: #b2f2bb;
   --tertiary-color: #bae1ff;
   --neutral-color: #fff9db;
+
+  --control-text-color: #2b2b2b;
 }
 
 * {

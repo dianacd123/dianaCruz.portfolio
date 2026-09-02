@@ -2,6 +2,8 @@ import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { useTranslation } from 'react-i18next'
 
+import { Send } from 'pixelarticons/react'
+
 function Contact() {
   const { t } = useTranslation()
   const form = useRef()
@@ -119,6 +121,7 @@ function Contact() {
             className="pixel-button"
             disabled={isSending}
           >
+            <Send />
             {isSending
               ? t('contact.sending')
               : t('contact.send')}

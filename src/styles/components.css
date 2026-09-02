@@ -11,7 +11,7 @@
   border: 0.1rem solid var(--text-color);
   border-radius: 999rem;
   background-color: transparent;
-  color: var(--text-color);
+   color: var(--control-text-color);
   cursor: pointer;
 }
 
@@ -256,7 +256,7 @@
   padding: 1rem 1.8rem;
   border: 0;
   background-color: var(--neutral-color);
-  color: var(--text-color);
+  color: var(--control-text-color);
   font-family: var(--font-pixel);
   font-size: 1.6rem;
   font-weight: 600;

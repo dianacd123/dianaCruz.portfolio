@@ -1,4 +1,8 @@
 import { useTranslation } from 'react-i18next'
+import {
+  Github,
+  ExternalLink
+} from 'pixelarticons/react'
 
 function ProjectCard({ project, index }) {
   const { t } = useTranslation()
@@ -44,6 +48,7 @@ function ProjectCard({ project, index }) {
                 className="pixel-button"
                 aria-label={`GitHub - ${projectText.title}`}
               >
+                <Github />
                 GitHub
               </a>
             </span>
@@ -58,6 +63,7 @@ function ProjectCard({ project, index }) {
                 className="pixel-button"
                 aria-label={`Demo - ${projectText.title}`}
               >
+                <ExternalLink />
                 Demo
               </a>
             </span>
