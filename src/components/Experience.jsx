@@ -8,22 +8,28 @@ function Experience() {
   })
 
   return (
-    <section id="experience" className="container">
+    <section id="experience" className="container experience">
       <h2>{t('sections.experience')}</h2>
 
-      {experience.map((job) => (
-        <article key={job.id}>
-          <h3>{job.role}</h3>
-          <p>{job.company}</p>
-          <p>{job.period}</p>
+      <div className="experience-list">
+        {experience.map((job) => (
+          <article className="experience-item" key={job.id}>
+            <div className="experience-marker"></div>
 
-          <ul>
-            {job.description.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </article>
-      ))}
+            <div className="experience-content">
+              <h3>{job.role}</h3>
+              <p className="experience-company">{job.company}</p>
+              <p className="experience-period">{job.period}</p>
+
+              <ul>
+                {job.description.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
   )
 }

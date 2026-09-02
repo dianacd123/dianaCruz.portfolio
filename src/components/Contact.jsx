@@ -39,13 +39,41 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className="container">
-      <h2>{t('sections.contact')}</h2>
+    <section id="contact" className="container contact">
+      <div className="contact-info">
+        <h2>{t('sections.contact')}</h2>
 
-      <p>{t('contact.intro')}</p>
+        <p>{t('contact.intro')}</p>
 
-      <form ref={form} onSubmit={sendEmail}>
-        <div>
+        <div className="contact-links">
+          <a href="mailto:dianacruzd01@outlook.com">
+            Email
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/diana-cd"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/dianacd123"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="contact-form"
+      >
+        <div className="form-group">
           <label htmlFor="name">
             {t('contact.name')}
           </label>
@@ -59,7 +87,7 @@ function Contact() {
           />
         </div>
 
-        <div>
+        <div className="form-group">
           <label htmlFor="email">
             {t('contact.email')}
           </label>
@@ -72,7 +100,7 @@ function Contact() {
           />
         </div>
 
-        <div>
+        <div className="form-group">
           <label htmlFor="message">
             {t('contact.message')}
           </label>
@@ -96,15 +124,19 @@ function Contact() {
               : t('contact.send')}
           </button>
         </span>
+
+        {status === 'success' && (
+          <p className="form-status">
+            {t('contact.success')}
+          </p>
+        )}
+
+        {status === 'error' && (
+          <p className="form-status">
+            {t('contact.error')}
+          </p>
+        )}
       </form>
-
-      {status === 'success' && (
-        <p>{t('contact.success')}</p>
-      )}
-
-      {status === 'error' && (
-        <p>{t('contact.error')}</p>
-      )}
     </section>
   )
 }
