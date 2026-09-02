@@ -1,7 +1,14 @@
-import paLaAsada from '../assets/projects/pa-la-asada.png'
-import voltium from '../assets/projects/voltium.png'
-import marketconnectLogistics from '../assets/projects/marketconnect-logistics.png'
-import marketconnectMachinery from '../assets/projects/marketconnect-machinery.png'
+import marketconnectNormal from '../assets/projects/normal/marketconnect-logistics.png'
+import marketconnectPixel from '../assets/projects/pixel/marketconnect-logistics.png'
+
+import machineryNormal from '../assets/projects/normal/marketconnect-machinery.png'
+import machineryPixel from '../assets/projects/pixel/marketconnect-machinery.png'
+
+import asadaNormal from '../assets/projects/normal/pa-la-asada.png'
+import asadaPixel from '../assets/projects/pixel/pa-la-asada.png'
+
+import voltiumNormal from '../assets/projects/normal/voltium.png'
+import voltiumPixel from '../assets/projects/pixel/voltium.png'
 
 export const projects = [
   {
@@ -19,7 +26,8 @@ export const projects = [
     ],
     repository: 'https://github.com/AllStarproyect/Pa-lasada.git',
     demo: null,
-    image: paLaAsada
+    imageNormal: asadaNormal,
+    imagePixel: asadaPixel,
   },
   {
     id: 2,
@@ -34,7 +42,8 @@ export const projects = [
     ],
     repository: 'https://github.com/Aldo3000/Voltium.git',
     demo: null,
-    image: voltium
+    imageNormal: voltiumNormal,
+    imagePixel: voltiumPixel,
   },
   {
     id: 3,
@@ -43,7 +52,8 @@ export const projects = [
     ],
     repository: null,
     demo: 'https://promarketconnect.com/',
-    image: marketconnectLogistics
+    imageNormal: marketconnectNormal,
+    imagePixel: marketconnectPixel,
   },
   {
     id: 4,
@@ -52,6 +62,7 @@ export const projects = [
     ],
     repository: null,
     demo: 'https://rentamaquinaria.promarketconnect.com/',
-    image: marketconnectMachinery
+    imageNormal: machineryNormal,
+    imagePixel: machineryPixel,
   }
 ]

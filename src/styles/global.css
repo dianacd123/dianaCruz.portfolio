@@ -6,6 +6,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Pixerif';
+  src: url('../assets/fonts/Pixerif.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background-color: #faf8f2;
   --text-color: #2b2b2b;
@@ -16,8 +24,8 @@
   --neutral-color: #fff9db;
 
   --font-display: 'Myrtille Pixel', cursive;
-  --font-main: 'Azeret Mono', monospace;
-  --font-mono: 'IBM Plex Mono', monospace;
+  --font-pixel: 'Pixerif', monospace;
+  --font-main: 'Plus Jakarta Sans', sans-serif;
 }
 
 [data-theme="dark"] {
@@ -92,20 +100,103 @@ p {
   margin-top: 0;
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--font-pixel);
+  font-weight: normal;
+}
+
 h1 {
-  font-size: clamp(4rem, 7vw, 7rem);
+  font-size: clamp(4.5rem, 7vw, 7rem);
   line-height: 1;
+  letter-spacing: 0.02em;
 }
 
 h2 {
-  font-size: clamp(2.8rem, 4vw, 4.8rem);
+  font-size: clamp(3rem, 4vw, 4.4rem);
   line-height: 1.1;
+  letter-spacing: 0.02em;
 }
 
 h3 {
-  font-size: clamp(2rem, 2.5vw, 2.8rem);
+  font-size: clamp(2.2rem, 2.5vw, 2.8rem);
   line-height: 1.2;
+  letter-spacing: 0.01em;
 }
+
+p {
+  margin-bottom: 1.6rem;
+  font-family: var(--font-main);
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+li,
+input,
+textarea,
+label {
+  font-family: var(--font-main);
+  font-size: 1.6rem;
+}
+
+a {
+  font-size: 1.5rem;
+}
+
+button {
+  font-family: var(--font-pixel);
+  font-size: 1.5rem;
+}
+
+button,
+.pixel-button,
+.language-toggle,
+.theme-toggle,
+.cv-download summary {
+  font-family: var(--font-pixel);
+}
+
+
+.navbar-links a,
+.project-role,
+.experience-company,
+.experience-period,
+.education-institution,
+.education-period,
+.education-status,
+.form-group label {
+  font-family: var(--font-pixel);
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.project-technologies li,
+.skill-group li {
+  font-family: var(--font-pixel);
+  font-size: 1.2rem;
+}
+
+.pixel-button {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 0.03em;
+}
+
+.hero-content > p:first-child {
+  font-family: var(--font-pixel);
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+}
+
+.hero-content h2 {
+  font-family: var(--font-pixel);
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+  line-height: 1.3;
+}
+
+
+
 
 p,
 li,
@@ -138,16 +229,16 @@ img {
   margin: 0 auto;
 }
 
+#root {
+  position: relative;
+  z-index: 1;
+}
 
 .doodle-layer {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  #root {
-  position: relative;
-  z-index: 1;
-  }
 }
 
 .doodle {
@@ -158,8 +249,7 @@ img {
   pointer-events: none;
 
   filter:
-    grayscale(1)
-    brightness(0.45);
+    grayscale(1) brightness(0.45);
 
   opacity: 0.52;
 }
@@ -168,11 +258,8 @@ img {
   width: 25rem;
   bottom: -5%;
   left: -1%;
-
   transform: rotate(20deg);
 }
-
-
 
 .doodle-naruto {
   width: 14rem;

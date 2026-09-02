@@ -11,9 +11,15 @@ function ProjectCard({ project, index }) {
     <article className="project-card">
       <div className="project-image-wrapper">
         <img
-          src={project.image}
+          src={project.imagePixel}
           alt={projectText.title}
-          className="project-image"
+          className="project-image project-image-pixel"
+        />
+
+        <img
+          src={project.imageNormal}
+          alt=""
+          className="project-image project-image-normal"
         />
       </div>
 

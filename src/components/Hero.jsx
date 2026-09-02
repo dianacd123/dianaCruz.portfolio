@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import dianaPhoto from '../assets/images/diana.png'
 
 function Hero() {
   const { t } = useTranslation()
@@ -80,7 +81,10 @@ function Hero() {
 
       <div className="hero-image">
         <img
+          src={dianaPhoto}
           alt="Diana Cruz Delgado"
+          className="hero-photo"
+
         />
       </div>
     </section>
