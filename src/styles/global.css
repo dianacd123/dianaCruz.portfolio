@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Myrtille Pixel';
+  src: url('../assets/fonts/myrtille-pixel.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background-color: #fff9db;
   --text-color: #2b2b2b;
@@ -6,6 +14,10 @@
   --secondary-color: #b2f2bb;
   --tertiary-color: #bae1ff;
   --neutral-color: #fff9db;
+
+  --font-display: 'Myrtille Pixel', cursive;
+  --font-main: 'Azeret Mono', monospace;
+  --font-mono: 'IBM Plex Mono', monospace;
 }
 
 [data-theme="dark"] {
@@ -31,11 +43,58 @@ body {
   margin: 0;
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-main);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(4rem, 7vw, 7rem);
+  line-height: 1;
+}
+
+h2 {
+  font-size: clamp(2.8rem, 4vw, 4.8rem);
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: clamp(2rem, 2.5vw, 2.8rem);
+  line-height: 1.2;
+}
+
+p,
+li,
+a,
+button,
+input,
+textarea,
+label {
+  font-size: 1.6rem;
+}
+
+section {
+  padding-block: 8rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .theme-transition {
   transition:
     background-color 0.8s ease,
     color 0.8s ease;
+}
+
+.container {
+  width: min(90%, 120rem);
+  margin: 0 auto;
 }

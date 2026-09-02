@@ -12,7 +12,7 @@ function Education() {
   })
 
   return (
-    <section>
+    <section className="container">
       <h2>{t('sections.education')}</h2>
 
       {education.map((item) => (

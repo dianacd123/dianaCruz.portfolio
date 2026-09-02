@@ -6,16 +6,17 @@ function Projects() {
   const { t } = useTranslation()
 
   return (
-    <section id="projects">
+    <section id="projects" className="container">
       <h2>{t('sections.projects')}</h2>
-
-      {projects.map((project, index) => (
-        <ProjectCard
-          key={project.id}
-          project={project}
-          index={index}
-        />
-      ))}
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            index={index}
+          />
+        ))}
+      </div>
     </section>
   )
 }

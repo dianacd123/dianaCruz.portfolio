@@ -39,7 +39,7 @@ function Contact() {
   }
 
   return (
-    <section id="contact">
+    <section id="contact" className="container">
       <h2>{t('sections.contact')}</h2>
 
       <p>{t('contact.intro')}</p>
@@ -85,15 +85,17 @@ function Contact() {
           />
         </div>
 
-        <button
-          type="submit"
-          disabled={isSending}
-        >
-          {isSending
-            ? t('contact.sending')
-            : t('contact.send')
-          }
-        </button>
+        <span className="pixel-button-wrapper">
+          <button
+            type="submit"
+            className="pixel-button"
+            disabled={isSending}
+          >
+            {isSending
+              ? t('contact.sending')
+              : t('contact.send')}
+          </button>
+        </span>
       </form>
 
       {status === 'success' && (

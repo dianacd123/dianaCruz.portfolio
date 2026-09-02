@@ -4,46 +4,82 @@ function Hero() {
   const { t } = useTranslation()
 
   return (
-    <section href="#home">
-      <p>{t('hero.portfolio')}</p>
-      <h1>{t('hero.name')}</h1>
-      <h2>{t('hero.role')}</h2>
-      <p>{t('hero.description')}</p>
-      <p>{t('hero.availability')}</p>
+    <section id="home" className="container hero">
+      <div className="hero-content">
+        <p>{t('hero.portfolio')}</p>
 
-      <div>
-        <a href="#contact">
-          {t('hero.contact')}
-        </a>
+        <h1 className="hero-name">
+          {t('hero.name')}
+        </h1>
 
-        <a href="/cv/Diana-Cruz-CV-ES.pdf" download>
-          {t('hero.downloadCV')}
-        </a>
+        <h2>{t('hero.role')}</h2>
+
+        <p>{t('hero.description')}</p>
+
+        <p>{t('hero.availability')}</p>
+
+        <div className="hero-actions">
+
+          <span className="pixel-button-wrapper">
+            <a
+              href="#contact"
+              className="pixel-button"
+            >
+              {t('hero.contact')}
+            </a>
+          </span>
+
+          <details className="cv-download">
+            <summary className="pixel-button-wrapper">
+              <span className="pixel-button">
+                {t('hero.downloadCV')}
+              </span>
+            </summary>
+
+            <div className="cv-download-menu">
+              <a
+                href="/cv/Diana-Cruz-CV-ES.pdf"
+                download
+              >
+                Español
+              </a>
+
+              <a
+                href="/cv/Diana-Cruz-CV-EN.pdf"
+                download
+              >
+                English
+              </a>
+            </div>
+          </details>
+
+        </div>
+
+        <div className="hero-socials">
+          <a href="mailto:dianacruzd01@outlook.com">
+            Email
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/diana-cd"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/dianacd123"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
       </div>
-      <div>
-        <a
-          href="mailto:dianacruzd01@outlook.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Email
-        </a>
 
-        <a
-          href="www.linkedin.com/in/diana-cd"
-          target="_blank"
-          rel="noreferrer"
-        >
-          LinkedIn
-        </a>
+      <div className="hero-image">
 
-        <a
-          href="https://github.com/dianacd123"
-          target="_blank"
-          rel="noreferrer"
-        >
-          GitHub
-        </a>
       </div>
     </section>
   )

@@ -8,7 +8,7 @@ function Experience() {
   })
 
   return (
-    <section id="experience">
+    <section id="experience" className="container">
       <h2>{t('sections.experience')}</h2>
 
       {experience.map((job) => (

@@ -8,44 +8,55 @@ function ProjectCard({ project, index }) {
   })
 
   return (
-    <article>
-      <img
-        src={project.image}
-        alt={projectText.title}
-      />
+    <article className="project-card">
+      <div className="project-image-wrapper">
+        <img
+          src={project.image}
+          alt={projectText.title}
+          className="project-image"
+        />
+      </div>
 
-      <h3>{projectText.title}</h3>
-      <p>{projectText.role}</p>
-      <p>{projectText.description}</p>
+      <div className="project-content">
+        <h3>{projectText.title}</h3>
+        <p className="project-role">{projectText.role}</p>
+        <p>{projectText.description}</p>
 
-      <ul>
-        {project.technologies.map((technology) => (
-          <li key={technology}>{technology}</li>
-        ))}
-      </ul>
+        <ul className="project-technologies">
+          {project.technologies.map((technology) => (
+            <li key={technology}>{technology}</li>
+          ))}
+        </ul>
 
-      <div>
-        {project.repository && (
-          <a
-            href={project.repository}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`GitHub - ${projectText.title}`}
-          >
-            GitHub
-          </a>
-        )}
+        <div className="project-links">
+          {project.repository && (
+            <span className="pixel-button-wrapper">
+              <a
+                href={project.repository}
+                target="_blank"
+                rel="noreferrer"
+                className="pixel-button"
+                aria-label={`GitHub - ${projectText.title}`}
+              >
+                GitHub
+              </a>
+            </span>
+          )}
 
-        {project.demo && (
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`Demo - ${projectText.title}`}
-          >
-            Demo
-          </a>
-        )}
+          {project.demo && (
+            <span className="pixel-button-wrapper">
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noreferrer"
+                className="pixel-button"
+                aria-label={`Demo - ${projectText.title}`}
+              >
+                Demo
+              </a>
+            </span>
+          )}
+        </div>
       </div>
     </article>
   )
